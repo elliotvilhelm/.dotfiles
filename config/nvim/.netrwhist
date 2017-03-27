@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/Reaper/Documents/PyFolder/UDEMY'
+let g:netrw_dirhist_2='/Users/Reaper'
+let g:netrw_dirhist_3='/Users/Reaper/Dropbox/StanfordMachineLearning/machine-learning-ex1'
+let g:netrw_dirhist_4='/Users/Reaper/xgboost/make'
+let g:netrw_dirhist_5='/usr/local/Cellar/gcc/6.3.0_1'
+let g:netrw_dirhist_6='/Users/Reaper/Dropbox/TurtleExamples'
