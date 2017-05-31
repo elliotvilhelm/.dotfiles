@@ -1,4 +1,5 @@
-
+export MYSQL_PATH=/usr/local/Cellar/mysql/5.6.27  
+export PATH=$PATH:$MYSQL_PATH/bin
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/zsh
 
@@ -51,14 +52,16 @@ fi
 
 ZSH_THEME=agnoster
 
+alias show-files='defaults write com.apple.finder AppleShowAllFiles YES'
 
+alias hide-files='defaults write com.apple.finder AppleShowAllFiles NO'
 alias reload!='source ~/.zshrc'
 alias vim='nvim'
 alias vi='nvim'
 alias cl='clear'
 alias l='ls -la'
 alias ..='cd ..'
-alias whosdaddy="osascript -e 'set volume 10';osascript -e 'say \"Deep learn this dick Elliot is daddy dont forget it. Elliot  is daddy dont forget it. Mah roof is not daddy Elliot is daddy dont forget it.\"'"
+alias whosdaddy="osascript -e 'set volume 10';osascript -e 'say \"elliot is daddy dont forget it elliot is daddy dont forget it.\"'"
 alias viconfig="cd .dotfiles/config/nvim; nvim init.vim"
 # user, host, full path, and time/date
 # on two lines for easier vgrepping
