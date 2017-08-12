@@ -32,7 +32,10 @@ export EDITOR='nvim'
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/octave/3.8.0/bin:$PATH
-export PATH=/Users/Reaper/anaconda2/bin:$PATH
+# export PATH=/Users/Reaper/anaconda3/bin:$PATH
+alias chrome='/usr/bin/open -a "/Applications/Google Chrome.app"'
+export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+
 
 # add /usr/local/sbin
 if [[ -d /usr/local/sbin ]]; then
@@ -68,7 +71,7 @@ alias viconfig="cd .dotfiles/config/nvim; nvim init.vim"
 # entry in a nice long thread on the Arch Linux forums: http://bbs.archlinux.org/#viewtopic.php?pid=521888#p521888
 
 alias pipmeout="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -"
-
+alias pip3meout="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -"
 PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%a %b %d, %H:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
 %{\e[0;34m%}%B└─%B[%{\e[1;35m%}$%{\e[0;34m%}%B]%{\e[0m%}%b '
 PS2=$' \e[0;34m%}%B>%{\e[0m%}%b '
