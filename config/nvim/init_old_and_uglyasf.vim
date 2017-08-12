@@ -2,87 +2,76 @@
 
 
 call plug#begin('~/.dotfiles/config/nvim/plugged')
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
 
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'sbdchd/neoformat'
-Plug 'flazz/vim-colorschemes'
 
-" auto completion
 Plug 'artur-shaik/vim-javacomplete2'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'ervandew/supertab'
-"Plug 'Valloric/YouCompleteMe'
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-Plug 'mitsuse/autocomplete-swift'
-" linting
-Plug 'scrooloose/syntastic'
-Plug 'benekastah/neomake'
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-" Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-
 " utilities
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
-
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-ragtag' "set of mappings for HTML, XML, PHP.
-Plug 'tpope/vim-surround' "add quotes brackets etc..
-Plug 'tpope/vim-fugitive' "git wrapper
-Plug 'tpope/vim-sleuth' " automatically adjusts shiftwifth and expandtab, shoudl be able to remove all indent config from this file
-"Plug 'tpope/vim-repeat'
-"Plug 'tpope/vim-dispatch'
-"Plug 'tpope/vim-vinegar'
-"Plug 'tpope/vim-abolish'
-" Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-"Plug 'hdima/python-syntax'
-
-Plug 'benmills/vimux' " allows tmux interaction
-Plug 'bling/vim-airline' "sleek bottom bar
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-surround'
+Plug 'benmills/vimux'
+Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'garbas/vim-snipmate' "add text snippets
-Plug 'editorconfig/editorconfig-vim' " make changes to vim editor
+Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake' " python
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'garbas/vim-snipmate'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-"Plug 'sotte/presenting.vim'
-
-"Plug 'AndrewRadev/splitjoin.vim'
-"Plug 'vim-scripts/matchit.zip'
-
+Plug 'sotte/presenting.vim'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-abolish'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
 Plug 'sickill/vim-pasta' " context-aware pasting
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " distraction-free writing Goyo [dimension] & Goyo!
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' } " focus tool. Good for presentating with vim
 
-Plug 'mattn/emmet-vim' "expanding abbreviations.. read the docs
-Plug 'gregsexton/MatchTag', { 'for': 'html' } " highlights matching html tag
-
-"Plug 'mxw/vim-jsx', { 'for': 'jsx' }
-"Plug 'elzr/vim-json', { 'for': 'json' }
-"Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
-"Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-
-" Plug 'juvenn/mustache.vim', { 'for': 'mustache' }
-" Plug 'mustache/vim-mustache-handlebars'
-" Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-" Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-" Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
-" Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'mattn/emmet-vim'
+Plug 'gregsexton/MatchTag', { 'for': 'html' }
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'jsx' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'juvenn/mustache.vim', { 'for': 'mustache' }
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
+Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-" Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' }
+Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'tclem/vim-arduino'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'flazz/vim-colorschemes'
+Plug 'hdima/python-syntax'
+
 call plug#end()
 
-
-
-" PYTHON CONFIG
 let g:syntastic_python_pylint_rcfile='/Reaper/.pylintrc'
 let python_highlight_all = 1
+
 let g:python_host_prog  = '/usr/local/Cellar/python/2.7.13/bin/python'
 let g:python3_host_prog  = '/usr/local/Cellar/python3/3.5.2_3/bin/python3'
 
@@ -101,16 +90,17 @@ set history=1000 " change history to 1000
 set textwidth=120
 
 " Tab control
-" set noexpandtab " insert tabs rather than spaces for <Tab>
-" set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-" set tabstop=4 " the visible width of tabs
-" set softtabstop=4 " edit as if the tabs are 4 characters wide
-" set shiftwidth=4 " number of spaces to use for indent and unindent
-" set shiftround " round indent to a multiple of 'shiftwidth'
-" set completeopt+=longest
+set noexpandtab " insert tabs rather than spaces for <Tab>
+set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4 " the visible width of tabs
+set softtabstop=4 " edit as if the tabs are 4 characters wide
+set shiftwidth=4 " number of spaces to use for indent and unindent
+set shiftround " round indent to a multiple of 'shiftwidth'
+set completeopt+=longest
 
 if has('mouse')
     set mouse=a
+    " set ttymouse=xterm2
 endif
 
 set clipboard=unnamed
@@ -136,6 +126,7 @@ nmap <silent> <leader>y :NERDTreeFind<cr>
 nmap <silent> <leader>c :Commentary<cr>
 
 " map fuzzyfinder (CtrlP) plugin
+" nmap <silent> <leader>t :CtrlP<cr>
 nmap <silent> <leader>r :CtrlPBuffer<cr>
 let g:ctrlp_map='<leader>t'
 let g:ctrlp_dotfiles=1
@@ -150,6 +141,12 @@ let g:neomake_javascript_jshint_maker = {
 \ }
 autocmd FileType javascript let g:neomake_javascript_enabled_makers = findfile('.jshintrc', '.;') != '' ? ['jshint', 'jscs'] : ['eslint']
 
+" CtrlP ignore patterns
+" let g:ctrlp_custom_ignore = {
+"             \ 'dir': '\.git$\|node_modules$\|bower_components$\|\.hg$\|\.svn$',
+"             \ 'file': '\.exe$\|\.so$'
+"             \ }
+" only show files that are not ignored by git
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " search the nearest ancestor that contains .git, .hg, .svn
@@ -235,6 +232,24 @@ let g:deoplete#ignore_sources = {}
 let g:deoplete#ignore_sources._ = ['buffer', 'vim', 'member']
 let g:deoplete#sources#go = 'vim-go'
 
+" deoplete tab-complete
+"inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" tern
+"autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
+
+
+"let g:deoplete#disable_auto_complete = 1
+
+"let g:deoplete#ignore_sources = {}
+"let g:deoplete#ignore_sources._ = ['javacomplete2']
+
+
+"inoremap <expr><C-n> deoplete#mappings#manual_complete()
+
+
+
+
 autocmd filetype indent on
 
 
@@ -246,7 +261,3 @@ autocmd filetype indent on
 autocmd filetype cpp nnoremap <F8> :w<CR>:!g++ -std=c++11 % -o%< && ./%<<CR>
 autocmd filetype c   nnoremap <F8> :w<CR>:!gcc % -o%< && ./%<<CR>
 autocmd filetype python nnoremap <F8> :w <bar> exec '!python '.shellescape('%')<CR>
-
-
-autocmd BufNewFile,BufRead *.swift set filetype=swift
-
