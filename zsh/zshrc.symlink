@@ -1,3 +1,0 @@
-
-ZSH_THEME=“agnoster”
-alias reload!='source ~/.zshrc'
