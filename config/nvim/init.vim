@@ -1,6 +1,7 @@
 
 
 
+
 call plug#begin('~/.dotfiles/config/nvim/plugged')
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
@@ -78,14 +79,17 @@ Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 " Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' }
 call plug#end()
 
-
+:imap jj <Esc>
 
 " PYTHON CONFIG
 let g:syntastic_python_pylint_rcfile='/Reaper/.pylintrc'
 let python_highlight_all = 1
 let g:python_host_prog  = '/usr/local/Cellar/python/2.7.13/bin/python'
-let g:python3_host_prog  = '/usr/local/Cellar/python3/3.5.2_3/bin/python3'
+let g:python3_host_prog  = '/usr/local/Cellar/python3/3.6.2/bin/python3'
 
+" for colorscheme to appear correct color
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set nocompatible " not compatible with vi
 set autoread " detect when a file is changed
