@@ -84,7 +84,7 @@ call plug#end()
 " PYTHON CONFIG
 let g:syntastic_python_pylint_rcfile='/Reaper/.pylintrc'
 let python_highlight_all = 1
-let g:python_host_prog  = '/usr/local/Cellar/python/2.7.13/bin/python'
+let g:python_host_prog  = '/usr/local/Cellar/python/2.7.14/bin/python'
 let g:python3_host_prog  = '/usr/local/Cellar/python3/3.6.2/bin/python3'
 
 " for colorscheme to appear correct color
