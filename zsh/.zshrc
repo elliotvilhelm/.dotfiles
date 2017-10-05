@@ -2,7 +2,7 @@ export MYSQL_PATH=/usr/local/Cellar/mysql/5.6.27
 export PATH=$PATH:$MYSQL_PATH/bin
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/zsh
-
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
 
@@ -35,7 +35,7 @@ export PATH=/usr/local/octave/3.8.0/bin:$PATH
 # export PATH=/Users/Reaper/anaconda3/bin:$PATH
 alias chrome='/usr/bin/open -a "/Applications/Google Chrome.app"'
 export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
-
+alias pushit="git push -u origin master"
 
 # add /usr/local/sbin
 if [[ -d /usr/local/sbin ]]; then
@@ -54,9 +54,8 @@ fi
 
 
 ZSH_THEME=agnoster
-
 alias show-files='defaults write com.apple.finder AppleShowAllFiles YES'
-
+alias ls='ls -G'
 alias hide-files='defaults write com.apple.finder AppleShowAllFiles NO'
 alias reload!='source ~/.zshrc'
 alias vim='nvim'
