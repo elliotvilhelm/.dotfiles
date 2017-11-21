@@ -1,11 +1,8 @@
-
-
-
-
 call plug#begin('~/.dotfiles/config/nvim/plugged')
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
-
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'majutsushi/tagbar'
+Plug 'jiangmiao/auto-pairs'
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'sbdchd/neoformat'
@@ -13,16 +10,17 @@ Plug 'flazz/vim-colorschemes'
 
 " auto completion
 Plug 'artur-shaik/vim-javacomplete2'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'zchee/deoplete-jedi'
 Plug 'ervandew/supertab'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'mitsuse/autocomplete-swift'
 " linting
-Plug 'scrooloose/syntastic'
-Plug 'benekastah/neomake'
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'w0rp/ale'
+" Plug 'scrooloose/syntastic'
+" Plug 'benekastah/neomake'
+" Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 " Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " utilities
@@ -84,8 +82,8 @@ call plug#end()
 " PYTHON CONFIG
 let g:syntastic_python_pylint_rcfile='/Reaper/.pylintrc'
 let python_highlight_all = 1
-let g:python_host_prog  = '/usr/local/Cellar/python/2.7.14/bin/python'
-let g:python3_host_prog  = '/usr/local/Cellar/python3/3.6.2/bin/python3'
+" let g:python_host_prog  = '/usr/local/Cellar/python/2.7.14/bin/python'
+" let g:python3_host_prog  = '/usr/local/Cellar/python3/3.6.2/bin/python3'
 
 " for colorscheme to appear correct color
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -136,7 +134,7 @@ nmap <silent> <leader>k :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
-" Commentary 
+" Commentary
 nmap <silent> <leader>c :Commentary<cr>
 
 " map fuzzyfinder (CtrlP) plugin
@@ -174,13 +172,13 @@ let g:vim_json_syntax_conceal = 0
 let g:SuperTabCrMapping = 0
 
 
-filetype plugin on 
+filetype plugin on
 syntax on
 set encoding=utf8
 "set background=dark
 "set background=light
 "colorscheme wombat256mod
-colorscheme Chasing_Logic
+colorscheme seoul256
 set number " show the current line number"
 set wrap "turn on line wrapping
 set wrapmargin=8 " wrap lines when coming within n characters from side
@@ -212,35 +210,23 @@ imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 nmap <F5> <Plug>(JavaComplete-Imports-Add)
 imap <F5> <Plug>(JavaComplete-Imports-Add)
 
-nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-
-nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-
-
-
-
-
-
-set runtimepath+=~/.dotfiles/config/nvim/plugged/deoplete.nvim/
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing) imap <F6> <Plug>(JavaComplete-Imports-AddMissing) nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused) imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused) set runtimepath+=~/.dotfiles/config/nvim/plugged/deoplete.nvim/
 set runtimepath+=~/.dotfiles/config/nvim/plugged/deoplete-jedi/
 
 " deoplete.vim
 " credit: https://gist.github.com/zchee/c314e63ae8b6bea50bb4
-let g:deoplete#enable_at_startup = 1
-set completeopt+=noinsert
-set completeopt-=preview
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#auto_completion_start_length = 0
+" let g:deoplete#enable_at_startup = 1
+" set completeopt+=noinsert
+" set completeopt-=preview
+" let g:deoplete#enable_ignore_case = 1
+" let g:deoplete#auto_completion_start_length = 0
 " https://github.com/Shougo/deoplete.nvim/issues/117
 
-let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources._ = ['buffer', 'vim', 'member']
-let g:deoplete#sources#go = 'vim-go'
+" let g:deoplete#ignore_sources = {}
+" let g:deoplete#ignore_sources._ = ['buffer', 'vim', 'member']
+" let g:deoplete#sources#go = 'vim-go'
 
 autocmd filetype indent on
-
 
 
 
@@ -253,4 +239,13 @@ autocmd filetype python nnoremap <F8> :w <bar> exec '!python '.shellescape('%')<
 
 
 autocmd BufNewFile,BufRead *.swift set filetype=swift
+" flake8
+let g:ale_python_flake8_args="--ignore=E501,E265,E221,W293"
 
+
+" tag bar
+nmap <silent><leader>a :Tagbar<cr>
+let g:tlist_ctags_cmd='/usr/local/cellar/ctags/5.8_1/bin/ctags'
+let g:airline_theme='wombat'
+
+noremap <Leader>s :update<CR>
