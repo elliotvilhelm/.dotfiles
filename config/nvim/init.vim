@@ -75,6 +75,10 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' } " highlights matching html tag
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 " Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' }
+Plug 'vim-scripts/Nibble'
+Plug 'vim-scripts/genutils'
+Plug 'vim-scripts/TeTrIs.vim'
+Plug 'vim-scripts/ScrollColors'
 call plug#end()
 
 :imap jj <Esc>
@@ -240,7 +244,7 @@ autocmd filetype python nnoremap <F8> :w <bar> exec '!python '.shellescape('%')<
 
 autocmd BufNewFile,BufRead *.swift set filetype=swift
 " flake8
-let g:ale_python_flake8_args="--ignore=E501,E265,E221,W293"
+let g:ale_python_flake8_args="--ignore=E501,E265,E221,W293,E741,E226"
 
 
 " tag bar
@@ -249,3 +253,18 @@ let g:tlist_ctags_cmd='/usr/local/cellar/ctags/5.8_1/bin/ctags'
 let g:airline_theme='wombat'
 
 noremap <Leader>s :update<CR>
+
+
+let g:ycm_global_ycm_extra_conf = '~/.dotfiles/config/nvim/.ycm_extra_conf.py'
+
+
+
+abbr sout System.out.println("");<Left><Left><Left> 
+" imap sout<Tab> System.out.println("");<Left><Left><Left> 
+" function! Eatchar(pat)
+"     let c = nr2char(getchar(0))
+"     return (c =~ a:pat) ? '' : c
+" endfunction
+" iabbrev ibt #!/usr/bin/tclsh<c-r>=Eatchar('\s')<cr>
+let g:JavaComplete_LibsPath="~/Dropbox/UCSD/Fall_2017/CSE8B/PA8/bookClasses.jar/"
+" let g:JavaComplete_JavaCompiler="/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/javac"
