@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/null/.dotfiles/zsh
-
+export PATH=$PATH:/Users/null/
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -116,5 +116,6 @@ alias cs='fortune | cowsay -f blowfish | lolcat'
 alias o="open "
 alias wassap="say fuuuuuuuuuuuuck"
 alias ucsd="cd ~/Dropbox/UCSD/Winter_2018"
+alias pushit="git push -u origin master"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
