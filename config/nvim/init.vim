@@ -1,11 +1,14 @@
 call plug#begin('~/.dotfiles/config/nvim/plugged')
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'majutsushi/tagbar'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
+Plug 'arakashic/chromatica.nvim'
+Plug 'tpope/vim-rails'
+
 " colorschemes
 Plug 'morhetz/gruvbox'
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 Plug 'flazz/vim-colorschemes'
 
 " auto completion
@@ -28,11 +31,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-unimpaired'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-ragtag' "set of mappings for HTML, XML, PHP.
 Plug 'tpope/vim-surround' "add quotes brackets etc..
-Plug 'tpope/vim-fugitive' "git wrapper
+"Plug 'tpope/vim-fugitive' "git wrapper
 Plug 'tpope/vim-sleuth' " automatically adjusts shiftwifth and expandtab, shoudl be able to remove all indent config from this file
 "Plug 'tpope/vim-repeat'
 "Plug 'tpope/vim-dispatch'
@@ -41,12 +44,12 @@ Plug 'tpope/vim-sleuth' " automatically adjusts shiftwifth and expandtab, shoudl
 " Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 "Plug 'hdima/python-syntax'
 
-Plug 'benmills/vimux' " allows tmux interaction
+"Plug 'benmills/vimux' " allows tmux interaction
 Plug 'bling/vim-airline' "sleek bottom bar
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'garbas/vim-snipmate' "add text snippets
-Plug 'editorconfig/editorconfig-vim' " make changes to vim editor
+"Plug 'garbas/vim-snipmate' "add text snippets
+"Plug 'editorconfig/editorconfig-vim' " make changes to vim editor
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 "Plug 'sotte/presenting.vim'
@@ -58,8 +61,8 @@ Plug 'sickill/vim-pasta' " context-aware pasting
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " distraction-free writing Goyo [dimension] & Goyo!
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' } " focus tool. Good for presentating with vim
 
-Plug 'mattn/emmet-vim' "expanding abbreviations.. read the docs
-Plug 'gregsexton/MatchTag', { 'for': 'html' } " highlights matching html tag
+"Plug 'mattn/emmet-vim' "expanding abbreviations.. read the docs
+"Plug 'gregsexton/MatchTag', { 'for': 'html' } " highlights matching html tag
 
 "Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 "Plug 'elzr/vim-json', { 'for': 'json' }
@@ -79,6 +82,7 @@ Plug 'vim-scripts/Nibble'
 Plug 'vim-scripts/genutils'
 Plug 'vim-scripts/TeTrIs.vim'
 Plug 'vim-scripts/ScrollColors'
+"Plug 'vim-scripts/vim-auto-save'
 call plug#end()
 
 :imap jj <Esc>
@@ -86,8 +90,8 @@ call plug#end()
 " PYTHON CONFIG
 let g:syntastic_python_pylint_rcfile='/Reaper/.pylintrc'
 let python_highlight_all = 1
-" let g:python_host_prog  = '/usr/local/Cellar/python/2.7.14/bin/python'
-" let g:python3_host_prog  = '/usr/local/Cellar/python3/3.6.2/bin/python3'
+"let g:python_host_prog  = '/usr/local/Cellar/python/2.7.14/bin/python'
+let g:python3_host_prog  = '/usr/local/Cellar/python/3.6.5/bin/python3'
 
 " for colorscheme to appear correct color
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -182,7 +186,8 @@ set encoding=utf8
 "set background=dark
 "set background=light
 "colorscheme wombat256mod
-colorscheme seoul256
+"colorscheme seoul256
+colorscheme Monokai
 set number " show the current line number"
 set wrap "turn on line wrapping
 set wrapmargin=8 " wrap lines when coming within n characters from side
@@ -235,7 +240,6 @@ autocmd filetype indent on
 
 
 
-
 " Compile and Run
 autocmd filetype cpp nnoremap <F8> :w<CR>:!g++ -std=c++11 % -o%< && ./%<<CR>
 autocmd filetype c   nnoremap <F8> :w<CR>:!gcc % -o%< && ./%<<CR>
@@ -268,3 +272,16 @@ abbr sout System.out.println("");<Left><Left><Left>
 " iabbrev ibt #!/usr/bin/tclsh<c-r>=Eatchar('\s')<cr>
 let g:JavaComplete_LibsPath="~/Dropbox/UCSD/Fall_2017/CSE8B/PA8/bookClasses.jar/"
 " let g:JavaComplete_JavaCompiler="/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/javac"
+"
+"
+"
+let g:chromatica#enable_at_startup=1
+let g:chromatica#libclang_path='/usr/local/opt/llvm/lib'
+
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+
+
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags

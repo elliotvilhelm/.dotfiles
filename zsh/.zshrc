@@ -1,9 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/anaconda3/bin:"$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/null/.dotfiles/zsh
 export PATH=$PATH:/Users/null/
+export PYTHONPATH=$PATH:Users/null/Documents/caffe/python:$PYTHONPATH
+export DYLD_LIBRARY_PATH='/usr/local/cuda/lib/'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -105,7 +110,7 @@ alias cl='clear'
 alias l='ls -la'
 alias ..='cd ..'
 alias whosdaddy="osascript -e 'set volume 10';osascript -e 'say \"elliot is daddy dont forget it elliot is daddy dont forget it.\"'"
-alias viconfig="cd .dotfiles/config/nvim; nvim init.vim"
+alias viconfig="cd ~/.dotfiles/config/nvim; nvim init.vim"
 # user, host, full path, and time/date
 # on two lines for easier vgrepping
 # entry in a nice long thread on the Arch Linux forums: http://bbs.archlinux.org/#viewtopic.php?pid=521888#p521888
@@ -117,5 +122,7 @@ alias o="open "
 alias wassap="say fuuuuuuuuuuuuck"
 alias ucsd="cd ~/Dropbox/UCSD/Winter_2018"
 alias pushit="git push -u origin master"
+alias code="cd ~/Dropbox/UCSD/Spring_2018/"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
