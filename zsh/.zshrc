@@ -16,9 +16,6 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# Add ssh-key to agent
-ssh-add -K ~/.ssh/id_rsa
-
 # Aliases
 alias show-files='defaults write com.apple.finder AppleShowAllFiles YES'
 alias hide-files='defaults write com.apple.finder AppleShowAllFiles NO'
