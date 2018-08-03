@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'arakashic/chromatica.nvim'
 Plug 'tpope/vim-rails'
+Plug 'majutsushi/tagbar'
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'sbdchd/neoformat'
@@ -44,6 +45,8 @@ Plug 'vim-scripts/Nibble'
 Plug 'vim-scripts/genutils'
 Plug 'vim-scripts/TeTrIs.vim'
 Plug 'vim-scripts/ScrollColors'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
@@ -197,3 +200,18 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 set tags=./tags,tags;$HOME
 
+" Toggle Tagbar
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+let g:chromatica#libclang_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+
+let g:chromatica#enable_at_startup=1
+
+" YouCompleteMe Settings
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+" Don't show YCM's preview window [ I find it really annoying ]
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
