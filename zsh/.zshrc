@@ -26,9 +26,9 @@ alias vi='nvim'
 alias cl='clear'
 alias l='ls -la'
 alias ..='cd ..'
-alias viconfig="nvim ~/.dotfiles/config/nvim"
+alias viconfig="nvim ~/.dotfiles/nvim/init.vim"
 alias zconfig="nvim ~/.dotfiles/zsh/.zshrc"
-alias tags="ctags -R -f ./.git/tags ."
+alias tags="ctags -R ."
 alias cat='lolcat'
 alias pipmeout="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -"
 alias pip3meout="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -"

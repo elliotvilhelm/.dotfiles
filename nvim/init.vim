@@ -47,6 +47,8 @@ Plug 'vim-scripts/ScrollColors'
 
 call plug#end()
 
+" remap esc
+inoremap jk <esc>
 :imap jj <Esc>
 
 " PYTHON CONFIG
@@ -82,8 +84,6 @@ set clipboard=unnamed
 " faster redrawing
 set ttyfast
 
-" remap esc
-inoremap jk <esc>
 
 " close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=0
@@ -194,3 +194,6 @@ let g:chromatica#enable_at_startup=1
 let g:chromatica#libclang_path='/usr/local/opt/llvm/lib'
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+set tags=./tags,tags;$HOME
+
