@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias show-files='defaults write com.apple.finder AppleShowAllFiles YES'
 alias hide-files='defaults write com.apple.finder AppleShowAllFiles NO'
-alias ls='ls -Ga'
+alias ls='ls -G'
 alias reload!='source ~/.zshrc'
 alias vim='nvim'
 alias vi='nvim'
