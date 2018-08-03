@@ -1,4 +1,4 @@
-call plug#begin('~/.dotfiles/config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'arakashic/chromatica.nvim'
 Plug 'tpope/vim-rails'
