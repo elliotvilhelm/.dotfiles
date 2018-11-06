@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/epourmand/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # More Path Stuff
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin:$PATH
@@ -37,6 +37,8 @@ alias o="open "
 alias push="git push origin master"
 alias jp="git add *; git commit -m 'jp'; git push origin master"
 alias wassap="say not much you?"
+alias python="python3"
+alias crypto_server="ssh -i \"crypto_key.pem\" ubuntu@ec2-34-220-164-33.us-west-2.compute.amazonaws.com"
 
 # Zendesk
 source ~/.zendesk_zshrc.sh
