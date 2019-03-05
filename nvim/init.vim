@@ -3,6 +3,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'arakashic/chromatica.nvim'
 Plug 'tpope/vim-rails'
 Plug 'majutsushi/tagbar'
+Plug 'vim-latex/vim-latex'
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'sbdchd/neoformat'

@@ -1,0 +1,4 @@
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "~/Music/iTunes/iTunes\ Media/"
+mpd_crossfade_time = 5

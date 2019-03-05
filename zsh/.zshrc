@@ -3,12 +3,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # More Path Stuff
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin:$PATH
-export PATH=$PATH:$HOME
+#export PATH=$PATH:$HOME
+export PATH=/Library/TeX/texbin:$PATH
+export PATH=/Users/null/.local/bin:$PATH
 
 # ZSH Themes and Plugins
 ZSH_THEME="robbyrussell"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   osx
@@ -40,6 +40,11 @@ alias wassap="say not much you?"
 alias python="python3"
 alias crypto_server="ssh -i \"crypto_key.pem\" ubuntu@ec2-34-220-164-33.us-west-2.compute.amazonaws.com"
 
-# Zendesk
-source ~/.zendesk_zshrc.sh
-ssh-add -K ~/.ssh/id_rsa
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/null/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/null/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/null/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/null/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
